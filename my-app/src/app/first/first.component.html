@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <label>
+      שם פרטי:
+      <input type="text" formControlName="firstName">
+    </label>
+  
+    <label>
+      שם משפחה:
+      <input type="text" formControlName="lastName">
+    </label>
+    <button [disabled]="myForm.invalid" type="submit">אישור</button>
+  </form>
